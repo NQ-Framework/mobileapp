@@ -1,0 +1,8 @@
+{
+  "name": "QR Catalogue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "460dc20e"
+}
