@@ -1,4 +1,4 @@
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonItem, IonList, IonTitle } from "@ionic/react";
+import { IonButton, IonCard, IonCardContent, IonCardHeader, IonTitle } from "@ionic/react";
 import QrScanner from 'qr-scanner';
 import { useSetRecoilState } from "recoil";
 import { cameraState } from "../data/camera.atom";
