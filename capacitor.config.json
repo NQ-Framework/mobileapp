@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "QR Catalogue",
+	"appId": "rs.victory.mobile.qrinventory",
+	"appName": "QR Inventory",
 	"webDir": "build",
 	"bundledWebRuntime": false
 }

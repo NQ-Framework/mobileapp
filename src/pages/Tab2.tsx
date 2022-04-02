@@ -18,7 +18,7 @@ const Tab2: React.FC = () => {
         <IonToolbar>
           <IonTitle>Lista - {count}</IonTitle>
           <IonButtons slot='primary'>
-            <IonButton onClick={() => {
+            {/* <IonButton onClick={() => {
               addItem({ id: uid(), value: 'asdasd', timestamp: new Date().toUTCString() });
               addItem({ id: uid(), value: 'qwe', timestamp: new Date().toUTCString() });
               addItem({ id: uid(), value: 'ouiou', timestamp: new Date().toUTCString() });
@@ -26,7 +26,7 @@ const Tab2: React.FC = () => {
             }}>
               <IonIcon icon={addOutline}>
               </IonIcon>
-            </IonButton>
+            </IonButton> */}
             <IonButton onClick={() => {
               setDeleteAllOpen(true);
             }}>

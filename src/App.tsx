@@ -68,7 +68,7 @@ const App: React.FC = () => (
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon icon={cloudUploadOutline} />
-            <IonLabel>Operacije</IonLabel>
+            <IonLabel>Slanje</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

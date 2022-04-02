@@ -1,5 +1,5 @@
 {
-  "name": "QR Catalogue",
+  "name": "QR Inventory",
   "integrations": {
     "capacitor": {}
   },
