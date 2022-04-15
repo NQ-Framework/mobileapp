@@ -19,13 +19,22 @@ const Tab3: React.FC = () => {
       return;
     }
     const csvString = arrayToCsv(list.map(l => [l.value, l.timestamp, l.id]));
-    const fileName = `${lastDate.toLocaleString()} - ${count} - ${firstDate.toLocaleString()}.csv`;
+    const fileName = `${formatDate(lastDate)}-${count}-${formatDate(firstDate)}.csv`;
     const urlEncodeFileName = encodeURIComponent(fileName);
 
 
     presentActionSheet({
       header: 'Na koji način želite da pošaljete listu?',
       buttons: [
+        {
+          text: 'Download CSV',
+          handler: () => {
+            const a = document.createElement('a');
+            a.href = `data:text/csv;charset=utf-8,${csvString}`;
+            a.download = fileName;
+            a.click();
+          }
+        },
         {
           text: 'Share',
           handler: () => {
@@ -35,15 +44,6 @@ const Tab3: React.FC = () => {
               ]
             });
           },
-        },
-        {
-          text: 'Download CSV',
-          handler: () => {
-            const a = document.createElement('a');
-            a.href = `data:text/csv;charset=utf-8,${csvString}`;
-            a.download = fileName;
-            a.click();
-          }
         },
         {
           text: 'Clipboard',
@@ -139,5 +139,16 @@ const Tab3: React.FC = () => {
     </IonPage>
   );
 };
+
+
+const formatDate = (date: Date): string => {
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+  const year = date.getFullYear().toString();
+  const hours = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+
+  return `${year}${month}${day}_${hours}${minutes}`;
+}
 
 export default Tab3;

@@ -1,5 +1,5 @@
 {
-	"appId": "rs.victory.mobile.qrinventory",
+	"appId": "com.nqframework.mobile",
 	"appName": "NQ Framework Mobile",
 	"webDir": "build",
 	"bundledWebRuntime": false
